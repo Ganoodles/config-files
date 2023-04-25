@@ -1,0 +1,84 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Ubuntu, Helvetica, Arial, "Weather Icons", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.747);
+    color: white;
+}
+
+tooltip {
+  background: rgb(24, 24, 24);
+  border-radius: 3px;
+  border: 1px solid rgba(133, 133, 133, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#window {
+    font-weight: bold;
+}
+
+#custom-launcher {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#workspaces button {
+    padding: 0 7px;
+    padding-top: 2px;
+    background: transparent;
+    color: white;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.active {
+    background: #242424;
+    border-bottom: 3px solid white;
+}
+
+#mode, #clock, #battery, #mpris, #tray, #workspaces, #window, #wireplumber {
+    padding-right: 20px;
+}
+
+#custom-weather {
+    padding-right: 20px;
+}
+
+#mode {
+    background: #ff0000;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: black;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
